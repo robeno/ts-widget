@@ -1,0 +1,77 @@
+@charset "utf-8";
+@import 'variables';
+
+$footer-padding: 0.25rem;
+
+// Importing all of Bulma
+@import '~bulma/bulma.sass';
+
+@import 'core';
+
+html {
+  background-color: $theme-steel;
+  overflow-y: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-content {
+  flex-grow: 1;
+
+  .container {
+    max-width: $container-max-width;
+  }
+
+  h3,
+  h4,
+  h5 {
+    color: $theme-blue-hover;
+  }
+
+  .shields {
+    a:not(:last-child) {
+      margin-right: 0.25rem;
+    }
+  }
+
+  .button {
+    background: $theme-blue;
+    color: $theme-steel;
+    border-radius: 10px;
+
+    &:hover,
+    &:focus {
+      background: $theme-blue-hover;
+      color: $theme-steel;
+    }
+  }
+
+  .preact-hint:after {
+    border: 10px solid transparent;
+    border-bottom: none;
+    border-top-color: #000;
+  }
+
+  .preact-hint__content {
+    font-size: 0.75em;
+
+    strong {
+      color: #fff;
+    }
+  }
+
+  pre {
+    padding: 0.8rem;
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    max-width: $container-max-width;
+  }
+}

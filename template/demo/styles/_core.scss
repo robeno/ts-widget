@@ -1,0 +1,39 @@
+@import 'variables';
+
+.hero,
+.footer {
+  background-image: linear-gradient(150deg, $theme-navy, $theme-blue);
+}
+
+.hero {
+  h2 {
+    color: $theme-steel;
+  }
+
+  h6 {
+    color: #bbb;
+  }
+
+  a {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 2rem;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    &:active,
+    &:focus {
+      background: #ddd linear-gradient(#eee, #ddd);
+      border-color: #bbb;
+      color: $theme-navy;
+    }
+  }
+}
+
+.footer {
+  padding: 0.25rem;
+  color: $theme-steel;
+}
